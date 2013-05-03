@@ -106,9 +106,11 @@ public class SecuredConsoleRunnable implements Runnable {
                 if (reader == null) {
                     initializeReader();
                 }
-                session.getConsole().printf("Username: ");
+                session.getConsole().printf("%nUsername: ");
+                session.getConsole().flush();
                 String username = reader.readLine();
-                session.getConsole().printf("Password: ");
+                session.getConsole().printf("%nPassword: ");
+                session.getConsole().flush();
                 String password = reader.readLine();
                 return authenticateService.authenticate(username, password);
             }
