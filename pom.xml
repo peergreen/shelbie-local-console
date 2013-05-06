@@ -30,6 +30,13 @@
 
   <name>Peergreen Shelbie Local Console</name>
 
+  <scm>
+    <connection>scm:git:https://forge.peergreen.com/git/git/shelbie/local-console.git</connection>
+    <developerConnection>scm:git:https://forge.peergreen.com/git/git/shelbie/local-console.git</developerConnection>
+    <url>https://forge.peergreen.com/git/summary/?r=shelbie/local-console.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <dependencies>
     <dependency>
       <groupId>org.ow2.shelbie</groupId>
@@ -96,5 +103,14 @@
     </plugins>
   </build>
 
+  <repositories>
+    <repository>
+      <id>peergreen.release</id>
+      <name>Peergreen Release Nexus</name>
+      <url>https://forge.peergreen.com/nexus/content/repositories/releases/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+  </repositories>
 
 </project>
