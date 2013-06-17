@@ -15,6 +15,7 @@
 
 package com.peergreen.shelbie.console.internal;
 
+import java.io.IOException;
 import javax.security.auth.Subject;
 
 import org.apache.felix.ipojo.annotations.Component;
@@ -79,6 +80,11 @@ public class LocalConsole {
 
     @Validate
     public void startup() throws Exception {
+
+        if (System.console() == null) {
+            // If there is no console attached to the JVM, abort console startup
+            throw new IOException("No console is attached to the JVM, aborting LocalConsole's startup");
+        }
 
         ClassLoader oldClassLoader = Thread.currentThread().getContextClassLoader();
         Thread.currentThread().setContextClassLoader(LocalConsole.class.getClassLoader());
