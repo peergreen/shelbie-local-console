@@ -13,6 +13,9 @@ package com.peergreen.shelbie.console.internal;
 
 import javax.security.auth.Subject;
 
+import jline.TerminalFactory;
+import jline.console.completer.Completer;
+
 import org.apache.felix.ipojo.annotations.Component;
 import org.apache.felix.ipojo.annotations.Invalidate;
 import org.apache.felix.ipojo.annotations.Requires;
@@ -24,10 +27,8 @@ import org.ow2.shelbie.core.history.HistoryFileProvider;
 import org.ow2.shelbie.core.prompt.PromptService;
 import org.ow2.shelbie.core.system.SystemService;
 
-import com.peergreen.security.UsernamePasswordAuthenticateService;
 import com.peergreen.security.AutoLoginService;
-import jline.TerminalFactory;
-import jline.console.completer.Completer;
+import com.peergreen.security.UsernamePasswordAuthenticateService;
 
 /**
  * A Local Console is launched during JVM startup (it cannot be started
@@ -57,7 +58,7 @@ public class LocalConsole {
     /**
      * Group that will contain the Thread created to run this instance.
      */
-    @Requires(filter = "(group.name=peergreen)")
+    @Requires(proxy=false, filter = "(group.name=peergreen)")
     private ThreadGroup threadGroup;
 
     @Requires
