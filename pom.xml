@@ -19,7 +19,7 @@
 
   <groupId>com.peergreen.shelbie</groupId>
   <artifactId>shelbie-local-console</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>bundle</packaging>
 
   <name>Peergreen Shelbie Local Console</name>
@@ -28,7 +28,7 @@
     <connection>scm:git:https://forge.peergreen.com/git/git/shelbie/local-console.git</connection>
     <developerConnection>scm:git:https://forge.peergreen.com/git/git/shelbie/local-console.git</developerConnection>
     <url>https://forge.peergreen.com/git/summary/?r=shelbie/local-console.git</url>
-    <tag>HEAD</tag>
+    <tag>SHELBIE_LOCAL_CONSOLE_1_0_1</tag>
   </scm>
 
   <properties>
